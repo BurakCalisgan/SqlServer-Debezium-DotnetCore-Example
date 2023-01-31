@@ -18,6 +18,7 @@ namespace DebeziumPoc.Api.Application.Service.Implementations
 
             if (request != null && request.Payload != null)
             {
+                entity.CreateDate = DateTime.Now;
                 entity.Op = request.Payload.op;
                 if (request.Payload.Before != null)
                 {

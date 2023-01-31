@@ -1,12 +1,7 @@
-﻿using Confluent.Kafka;
-using DebeziumPoc.Api.Application.Common.Interfaces;
+﻿using DebeziumPoc.Api.Application.Common.Interfaces;
 using DebeziumPoc.Api.Application.Service.Abstractions;
-using DebeziumPoc.Api.Infrastructure.Configurations;
 using DebeziumPoc.Api.Models;
-using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using System.Diagnostics.Tracing;
-using System.Threading;
 
 namespace DebeziumPoc.Api.Infrastructure.Services
 {
@@ -15,7 +10,7 @@ namespace DebeziumPoc.Api.Infrastructure.Services
         private IEventConsumer _consumer;
         private readonly ILogger<KafkaConsumerService> _logger;
         private readonly IServiceProvider _collection;
-
+        
         public KafkaConsumerService(IEventConsumer consumer, ILogger<KafkaConsumerService> logger,IServiceProvider collection)
         {
             _consumer = consumer;
