@@ -1,4 +1,4 @@
-# SqlServer-Debezium-DotnetCore
+# SqlServer-Debezium-MongoDB-DotnetCore-Example
 
 ## Researchs
 
